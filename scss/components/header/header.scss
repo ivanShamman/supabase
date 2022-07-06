@@ -1,0 +1,56 @@
+.header{
+    margin-bottom: 80px;
+    & .navbar-toggler{
+        border: none;
+        & .navbar-toggler-icon{
+            background-image: url(../assets/icons/burger.svg);
+        }
+        &:focus{
+            box-shadow: none;
+        }
+    }
+    &__nav{
+        & .nav-item:not(:last-child){
+            margin-right: 20px;
+        }
+        & .nav-link{
+            color:$black-main-color;
+            &:hover{
+                color: $main-btn-color;
+                transition:$transition;
+            }
+        }
+        & .dropdown-menu{
+            background-color: $black-main-bg;
+            border: 1px solid $main-btn-color;
+
+            & .dropdown-item{
+                color: $black-main-color;
+                font-size: $font-md-size;
+                &:hover,
+                &:active{
+                    background-color: transparent;
+                    color: $main-btn-color;
+                }
+            }
+        }
+
+    }
+    &__btn{
+        &-start{
+            padding: 7px 11px;
+            font-size: $font-sm-ex-size;
+            font-weight: 700;
+        }
+        &-sign-in{
+            color:$black-main-color;
+            font-weight: 700;
+            text-decoration: none;
+            &:hover{
+                color: $main-btn-color;
+                transition:$transition;
+            }
+        }
+    }
+
+}

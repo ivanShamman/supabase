@@ -1,0 +1,28 @@
+.sign-in-modal,
+.registration-modal{
+    &__content{
+        background-color: $black-main-bg;
+        border-color:$main-btn-color;
+        width: inherit;
+    }
+    & .modal-body{
+        input{
+            background-color: $black-main-bg;
+            border-color: $main-btn-color;
+            color:$default-white-color;
+            font-size: $font-md-size !important;
+            &:focus{
+                box-shadow: 0 0 0 0.25rem rgb(53 91 38 / 25%);
+            }
+        }
+    }
+    & .modal-footer{
+        border-color:$main-btn-color;
+    }
+}
+.registration-modal{
+    .form-text{
+        color: $black-main-color;
+        font-size: $font-sm-ex-size;
+    }
+}

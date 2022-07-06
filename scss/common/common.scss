@@ -1,0 +1,78 @@
+body{
+    font-family:$font-family;
+    font-size:$font-md-size;
+    color:$black-main-color;
+    background-color:$black-main-bg;
+}
+
+.container{
+    @media (min-width: 1200px) {
+        max-width:$desktop-container-width;
+    }
+}
+
+ul{
+    list-style: none;
+}
+.title{
+    font-size:$font-xxl-ex-size;
+    line-height: 58px;
+    font-weight: 700;
+    @media (max-width:415px) {
+        font-size:$font-xll-size;
+    }
+}
+.subtitle{
+    font-size:$font-xll-size;
+    font-weight: 400;
+}
+.title,
+.subtitle{
+    color: $default-white-color;
+}
+
+h3{
+    font-size:$font-xl-size;
+    color:$default-white-color;
+}
+
+.btn-success{
+    background-color: $main-btn-color;
+    border: 1px solid $main-btn-color;
+    &:hover{
+        background-color: transparent;
+        color:$main-btn-color;
+        transition:$transition;
+    }
+    &:focus{
+        box-shadow: none;
+    }
+}
+.btn-secondary{
+    padding: 6px 13px;
+    background: #2A2A2A;
+    border-color:#2A2A2A;
+    &:hover{
+        background-color:transparent;
+        transition:$transition;
+    }
+    &:focus{
+        box-shadow: none;
+    }
+}
+.btn-outline-secondary{
+    font-size: $font-sm-ex-size;
+    color: $dark-gray-color;
+    padding: 6px 10px;
+    border: none;
+    &-active,
+    &:hover,
+    &:active,
+    &:focus{
+        color: $default-white-color;
+        background: #2A2A2A;
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.043);
+        border-radius: 4px;
+        transition:$transition;
+    }
+}

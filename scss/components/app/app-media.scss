@@ -1,0 +1,10 @@
+.app{
+    @media (max-width:415px) {
+        &__integrate-content-card-body{
+            & a{
+                display: flex !important;
+                justify-content: center;
+            }
+        }
+    }
+}

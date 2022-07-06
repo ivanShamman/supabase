@@ -1,0 +1,17 @@
+.get-started{
+    margin: 100px 0;
+    &__wrapper{
+        padding-bottom: 100px;
+        border-bottom: 1px solid  $border-color;
+    }
+    .subtitle{
+        color: #BBBBBB;
+        font-weight: 400;
+        margin-bottom: 45px;
+        span{
+            color: $default-white-color;
+            font-weight: 700;
+        }
+    }
+    
+}
