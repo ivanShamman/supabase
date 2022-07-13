@@ -9,9 +9,15 @@
         font-weight: 400;
         margin-bottom: 45px;
         span{
-            color: $default-white-color;
+            color: $dark-title-color;
             font-weight: 700;
         }
     }
     
+}
+
+html.light .get-started{
+    span{
+        color:$main-btn-color;
+    }
 }

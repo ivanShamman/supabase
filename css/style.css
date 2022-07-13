@@ -25,10 +25,6 @@ body {
   }
 }
 
-ul {
-  list-style: none;
-}
-
 .title {
   font-size: 48px;
   line-height: 58px;
@@ -45,14 +41,14 @@ ul {
   font-weight: 400;
 }
 
-.title,
-.subtitle {
-  color: #fff;
-}
-
 h3 {
   font-size: 18px;
-  color: #fff;
+}
+
+.title,
+.subtitle,
+h3 {
+  color: #ffffff;
 }
 
 .btn-success {
@@ -88,21 +84,40 @@ h3 {
   border: none;
 }
 .btn-outline-secondary-active, .btn-outline-secondary:hover, .btn-outline-secondary:active, .btn-outline-secondary:focus {
-  color: #fff;
+  color: #ffffff;
   background: #2A2A2A;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.043);
   border-radius: 4px;
   transition: 0.5s;
 }
 
+html.light body {
+  background-color: #f8f9fa;
+  color: #687076;
+}
+html.light .title,
+html.light .subtitle,
+html.light h3 {
+  color: #333333;
+}
+
+ul {
+  list-style: none;
+}
+
 .header {
-  margin-bottom: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #181818;
 }
 .header .navbar-toggler {
   border: none;
 }
 .header .navbar-toggler .navbar-toggler-icon {
-  background-image: url(../assets/icons/burger.svg);
+  background-image: url(../assets/icons/burger-dark.svg);
 }
 .header .navbar-toggler:focus {
   box-shadow: none;
@@ -144,6 +159,39 @@ h3 {
   transition: 0.5s;
 }
 
+html.light .header {
+  background-color: #f8f9fa;
+}
+html.light .header .navbar-toggler .navbar-toggler-icon {
+  background-image: url(../assets/icons/burger-light.svg);
+}
+html.light .header__nav .nav-link {
+  color: #333333;
+}
+html.light .header__nav .nav-link:hover {
+  color: #24B47E;
+}
+html.light .header .dropdown-menu {
+  background-color: #f8f9fa;
+  border: 1px solid #24B47E;
+}
+html.light .header .dropdown-menu .dropdown-item {
+  color: #333333;
+}
+html.light .header .dropdown-menu .dropdown-item:hover, html.light .header .dropdown-menu .dropdown-item:active {
+  background-color: transparent;
+  color: #24B47E;
+}
+html.light .header__btn-sign-in {
+  color: #333333;
+  font-weight: 700;
+  text-decoration: none;
+}
+html.light .header__btn-sign-in:hover {
+  color: #24B47E;
+  transition: 0.5s;
+}
+
 @media (max-width: 1121px) {
   .banner__content .title {
     margin-bottom: 25px !important;
@@ -166,9 +214,14 @@ h3 {
   margin-bottom: 32px;
   gap: 12px;
 }
+.banner__content-storage-icon {
+  padding: 8px;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
 .banner__content-storage span {
   font-size: 18px;
-  color: #fff;
+  color: #ffffff;
 }
 .banner__content .title {
   margin-bottom: 52px;
@@ -184,18 +237,29 @@ h3 {
   font-size: 12px;
 }
 
+html.light .banner__content-storage-icon {
+  background-color: #333333;
+}
+html.light .banner__content-storage span {
+  color: #333333;
+}
+
 .about {
   margin: 100px 0;
 }
 .about__content-icon {
   display: inline-block;
   padding: 10px 12px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 6px;
   margin-bottom: 16px;
 }
 .about__content-wrapper h3 {
   margin-bottom: 20px;
+}
+
+html.light .about__content-icon {
+  background-color: #333333;
 }
 
 .app {
@@ -216,6 +280,10 @@ h3 {
 .app__preview-title p:first-of-type {
   font-size: 18px;
   margin-bottom: 16px;
+}
+.app__preview-content-img {
+  overflow: hidden;
+  border-radius: 12px;
 }
 .app__preview-content-btn {
   margin-bottom: 16px;
@@ -299,6 +367,10 @@ h3 {
   gap: 15px;
 }
 
+html.light .app__preview-content-card-body-wrapper {
+  background-color: #e0e0e0;
+}
+
 @media (max-width: 415px) {
   .app__integrate-content-card-body a {
     display: flex !important;
@@ -319,8 +391,12 @@ h3 {
   margin-bottom: 45px;
 }
 .get-started .subtitle span {
-  color: #fff;
+  color: #ffffff;
   font-weight: 700;
+}
+
+html.light .get-started span {
+  color: #24B47E;
 }
 
 @media (max-width: 415px) {
@@ -373,6 +449,14 @@ h3 {
   box-shadow: none;
 }
 
+html.light .footer a {
+  color: #687076;
+}
+html.light .footer a:hover {
+  color: #24B47E;
+  transition: 0.5s;
+}
+
 .sign-in-modal__content,
 .registration-modal__content {
   background-color: #181818;
@@ -383,7 +467,7 @@ h3 {
 .registration-modal .modal-body input {
   background-color: #181818;
   border-color: #24B47E;
-  color: #fff;
+  color: #ffffff;
   font-size: 14px !important;
 }
 .sign-in-modal .modal-body input:focus,
@@ -398,6 +482,19 @@ h3 {
 .registration-modal .form-text {
   color: #E0E0E0;
   font-size: 12px;
+}
+
+html.light .sign-in-modal__content,
+html.light .registration-modal__content {
+  background-color: #ffffff;
+}
+html.light .sign-in-modal .modal-body input,
+html.light .registration-modal .modal-body input {
+  background-color: #ffffff;
+  color: #333333;
+}
+html.light .registration-modal .form-text {
+  color: #333333;
 }
 
 /*# sourceMappingURL=style.css.map */

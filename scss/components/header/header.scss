@@ -1,9 +1,15 @@
 .header{
-    margin-bottom: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: $dark-main-bg;
+
     & .navbar-toggler{
         border: none;
         & .navbar-toggler-icon{
-            background-image: url(../assets/icons/burger.svg);
+            background-image: url(../assets/icons/burger-dark.svg);
         }
         &:focus{
             box-shadow: none;
@@ -14,18 +20,18 @@
             margin-right: 20px;
         }
         & .nav-link{
-            color:$black-main-color;
+            color: $dark-main-color;
             &:hover{
                 color: $main-btn-color;
                 transition:$transition;
             }
         }
         & .dropdown-menu{
-            background-color: $black-main-bg;
+            background-color: $dark-main-bg;
             border: 1px solid $main-btn-color;
 
             & .dropdown-item{
-                color: $black-main-color;
+                color: $dark-main-color;
                 font-size: $font-md-size;
                 &:hover,
                 &:active{
@@ -43,7 +49,7 @@
             font-weight: 700;
         }
         &-sign-in{
-            color:$black-main-color;
+            color: $dark-main-color;
             font-weight: 700;
             text-decoration: none;
             &:hover{
@@ -52,5 +58,45 @@
             }
         }
     }
+}
 
+html.light .header{
+    background-color:$light-main-bg;
+    & .navbar-toggler{
+        & .navbar-toggler-icon{
+            background-image: url(../assets/icons/burger-light.svg);
+        }
+    }
+    &__nav{
+        & .nav-link{
+            color:$light-title-color;
+            &:hover{
+                color: $main-btn-color;
+            }
+        }
+    }
+    & .dropdown-menu{
+        background-color: $light-main-bg;
+        border: 1px solid $main-btn-color;
+
+        & .dropdown-item{
+            color: $light-title-color;
+            &:hover,
+            &:active{
+                background-color: transparent;
+                color: $main-btn-color;
+            }
+        }
+    }
+    &__btn{
+        &-sign-in{
+            color:$light-title-color;
+            font-weight: 700;
+            text-decoration: none;
+            &:hover{
+                color: $main-btn-color;
+                transition:$transition;
+            }
+        }
+    }
 }

@@ -16,6 +16,10 @@
             }
         }
         &-content{
+            &-img{
+                overflow: hidden;
+                border-radius: 12px;
+            }
             &-btn{
                 margin-bottom: 16px;
                 gap: 12px;
@@ -114,6 +118,10 @@
             }
         }
     }
+}
 
-
+html.light .app{
+    &__preview-content-card-body-wrapper{
+        background-color: #e0e0e0;
+    }
 }

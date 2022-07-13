@@ -45,3 +45,13 @@
         }
     }
 }
+
+html.light .footer{
+    a{
+        color: #687076;
+        &:hover{
+            color: $main-btn-color;
+            transition: $transition;
+        }
+    }
+}
