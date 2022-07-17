@@ -11,15 +11,15 @@ function windowLoad() {
     const lightLogo = document.querySelectorAll(".light-logo");
     let userTheme;
 
-    function changeStartHtml(){
-        if(saveUserTheme === "light"){
+    function changeStartHtml(theme){
+        if(theme === "light"){
             switchInput.checked = false;
             lightLogo[0].hidden = false;
             lightLogo[1].hidden = false;
             darkLogo[0].hidden = true;
             darkLogo[1].hidden = true;
         }
-        else if(saveUserTheme === "dark"){
+        else if(theme === "dark"){
             switchInput.checked = true;
             lightLogo[0].hidden = true;
             lightLogo[1].hidden = true;
@@ -27,8 +27,6 @@ function windowLoad() {
             darkLogo[1].hidden = false;
         }
     }
-
-    changeStartHtml();
 
     if(window.matchMedia){
         userTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark":"light";
@@ -43,9 +41,11 @@ function windowLoad() {
 
     function setThemeClass(){
         if(saveUserTheme){
+            changeStartHtml(saveUserTheme);
             htmlBlock.classList.add(saveUserTheme);
         }
         else{
+            changeStartHtml(userTheme);
             htmlBlock.classList.add(userTheme);
         }
     }
